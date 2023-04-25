@@ -50,12 +50,22 @@ body {
 .skills-title div {
     text-align: center;
     width: 50%;
-    padding-top: 3%;
+    padding-top: 2%;
     padding-left: 3.5%;
 }
 
-.skills {
+.skills-box {
+    display: flex;
     text-align: center;
+    padding-left: 23.5%;
+}
+
+.skills-box div {
+    text-align: center;
+}
+
+.coding-languages div {
+    padding-left: 30px;
 }
 
 img {
