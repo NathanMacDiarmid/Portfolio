@@ -47,6 +47,11 @@ img {
     padding-top: 12%;
 }
 
+#bio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .skills-title {
     color: black;
 }
@@ -61,7 +66,7 @@ img {
 .skills-box {
     display: flex;
     text-align: center;
-    padding-left: 23.5%;
+    padding-left: 22%;
     width: 55%;
 }
 
@@ -71,4 +76,12 @@ img {
 
 .coding-languages div {
     padding-left: 3%;
+}
+
+.coding-languages ul {
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+    list-style-type: none;
+    padding-left: 3.5%;
 }
