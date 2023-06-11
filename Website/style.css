@@ -12,7 +12,7 @@ img {
     border-radius: 12%;
 }
 
-.pong {
+#pong {
     background-image: url("../Background/Pong.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -49,29 +49,13 @@ img {
 
 #bio {
     display: flex;
-    flex-wrap: wrap;
+    text-align: center;
+    padding-left: 19%;
+    width: 68%;
 }
 
 .skills-title {
     color: black;
-}
-
-.skills-title div {
-    text-align: center;
-    width: 50%;
-    padding-top: 2%;
-    padding-left: 3.5%;
-}
-
-.skills-box {
-    display: flex;
-    text-align: center;
-    padding-left: 22%;
-    width: 55%;
-}
-
-.skills-box div {
-    text-align: center;
 }
 
 .coding-languages div {
