@@ -84,3 +84,18 @@ ul {
     text-decoration: underline #D18181 40%;
     text-underline-offset: -40%;
 }
+
+.expand {
+    color: #D18181;
+    text-decoration: none;
+}
+
+.expand:hover {
+    text-decoration: underline #D18181 15%;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 8%;
+}
+
+.break {
+    padding-bottom: 1.5%;
+}
