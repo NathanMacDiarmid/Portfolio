@@ -52,7 +52,8 @@ ul {
 #bio {
     display: flex;
     color: black;
-    width: 68%;
+    width: 55%;
+    padding: 1% 0 0 21%;
 }
 
 #bio ul {
@@ -71,7 +72,7 @@ ul {
 }
 
 .description {
-    margin: 7% 0 0 2%;
+    margin: 5.5% 0 0 2%;
 }
 
 .underline {
@@ -94,8 +95,4 @@ ul {
     text-decoration: underline #D18181 15%;
     text-decoration-skip-ink: none;
     text-underline-offset: 8%;
-}
-
-.break {
-    padding-bottom: 1.5%;
 }
