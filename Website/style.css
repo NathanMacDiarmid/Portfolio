@@ -16,6 +16,14 @@ ul {
     list-style-type: none;
 }
 
+#blue-background {
+    background-color: #345365;
+}
+
+#pink-background {
+    background-color: #D18181;
+}
+
 #pong {
     background-image: url("../Background/Pong.png");
     background-repeat: no-repeat;
@@ -95,4 +103,24 @@ ul {
     text-decoration: underline #D18181 15%;
     text-decoration-skip-ink: none;
     text-underline-offset: 8%;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    width: 55%;
+    padding-left: 21%;
+}
+
+#projects h1 {
+    width: 100%;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    margin: 0 3% 3% 0;
+    width: 30%; 
 }
