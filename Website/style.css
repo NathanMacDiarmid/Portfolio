@@ -8,6 +8,10 @@ body {
     background-color: beige;
 }
 
+section {
+    margin-bottom: 2%;
+}
+
 img {
     border-radius: 12%;
 }
@@ -61,7 +65,7 @@ ul {
     display: flex;
     color: black;
     width: 55%;
-    padding: 1% 0 0 21%;
+    padding: 0 0 0 21%;
 }
 
 #bio ul {
@@ -89,7 +93,7 @@ ul {
     text-underline-offset: -30%;
 }
 
-.underline h1 {
+h1.underline {
     text-decoration: underline #D18181 40%;
     text-underline-offset: -40%;
 }
@@ -119,8 +123,12 @@ ul {
 
 .project {
     display: flex;
-    flex-wrap: wrap;
     color: white;
+    max-width: 30%;
+    border-radius: 12%;
     margin: 0 2% 2% 0;
-    width: 31%; 
+}
+
+.project-text {
+    padding: 5% 1% 6% 3%;
 }
