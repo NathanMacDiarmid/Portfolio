@@ -12,6 +12,10 @@ section {
     margin-bottom: 2%;
 }
 
+hr {
+    border: 3px solid #345365;
+}
+
 h1 {
     width: 100%;
     color: black;
@@ -39,6 +43,8 @@ ul {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-bottom: 7%;
+    margin-top: 0;
+    margin-bottom: 2%;
 }
 
 .navbar {
@@ -51,6 +57,13 @@ ul {
     float: right;
     padding: 1.1% 1.6%;
     color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline #D18181 30%;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -30%;
 }
 
 .navbar div a {
@@ -71,7 +84,7 @@ ul {
     display: flex;
     color: black;
     width: 55%;
-    padding: 0 0 0 21%;
+    padding-left: 23.5%;
 }
 
 #bio ul {
@@ -93,14 +106,9 @@ ul {
     margin: 5.5% 0 0 2%;
 }
 
-.underline {
-    text-decoration: underline #D18181 30%;
-    text-decoration-skip-ink: none;
-    text-underline-offset: -30%;
-}
-
 h1.underline {
     text-decoration: underline #D18181 40%;
+    text-decoration-skip-ink: none;
     text-underline-offset: -40%;
 }
 
@@ -119,7 +127,7 @@ h1.underline {
     display: flex;
     flex-wrap: wrap;
     width: 55%;
-    padding-left: 21%;
+    padding-left: 16.5%;
 }
 
 .project {
@@ -162,6 +170,7 @@ h1.underline {
 .right-footer {
     float: right;
     text-align: right;
+    padding: 3% 5% 0 0;
 }
 
 .right-footer a {
@@ -169,7 +178,22 @@ h1.underline {
     text-decoration: none;
 }
 
+.right-footer a:hover {
+    color: #D18181;
+}
+
 .left-footer {
     float: left;
     text-align: left;
+    padding: 3% 0 0 5%;
+}
+
+.left-line {
+    float: left;
+    width: 7%;
+}
+
+.right-line {
+    float: right;
+    width: 7%;
 }
