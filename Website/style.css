@@ -1,3 +1,8 @@
+/* 
+        All General CSS
+    *Used Across Multiple Pages*
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +11,10 @@
 
 body {
     background-color: beige;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 section {
@@ -30,6 +39,24 @@ ul {
     list-style-type: none;
 }
 
+input {
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    padding: 2% 2% 2% 2%;
+}
+
+input:focus {
+    outline: 2px solid #D18181;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    padding: 2% 2% 2% 2%;
+}
+
 .blue-background {
     background-color: #345365;
 }
@@ -37,6 +64,55 @@ ul {
 .pink-background {
     background-color: #D18181;
 }
+
+#other-header {
+    background-image: url("../Background/Other\ Page\ Header.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: -2%;
+}
+
+#footer {
+    color: white;
+    background-image: url("../Background/Pong_Footer.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 10%;
+    margin: 4% 0 0 0;
+}
+
+.right-footer {
+    float: right;
+    text-align: right;
+    padding: 3% 5% 0 0;
+}
+
+.right-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.right-footer a:hover {
+    color: #D18181;
+}
+
+.left-footer {
+    float: left;
+    text-align: left;
+    padding: 3% 0 0 5%;
+}
+
+.left-line {
+    float: left;
+    width: 7%;
+}
+
+.right-line {
+    float: right;
+    width: 7%;
+}
+
+/* Home Page CSS*/
 
 #home-header {
     background-image: url("../Background/Pong_Header.png");
@@ -153,62 +229,17 @@ h1.underline {
     text-align: center;
     justify-content: center;
     align-items: center;
-    gap: 1%;
+    gap: 5%;
 }
 
 .contactme-button {
     background-color: #D18181;
     color: white;
-    width: 8%;
+    width: 150%;
     height: 60px;
 }
 
-#footer {
-    color: white;
-    background-image: url("../Background/Pong_Footer.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding-bottom: 10%;
-    margin: 4% 0 0 0;
-}
-
-.right-footer {
-    float: right;
-    text-align: right;
-    padding: 3% 5% 0 0;
-}
-
-.right-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.right-footer a:hover {
-    color: #D18181;
-}
-
-.left-footer {
-    float: left;
-    text-align: left;
-    padding: 3% 0 0 5%;
-}
-
-.left-line {
-    float: left;
-    width: 7%;
-}
-
-.right-line {
-    float: right;
-    width: 7%;
-}
-
-#other-header {
-    background-image: url("../Background/Other\ Page\ Header.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin-bottom: -2%;
-}
+/* Project Page Portions CSS */
 
 #project {
     display: flex;
@@ -231,7 +262,23 @@ h1.underline {
 }
 
 #project-header {
+    width: 55%;
     margin: 4% 0 0 22.5%;
+}
+
+#project-header ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5%;
+}
+
+#project-header li {
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin-bottom: 1%;
+    padding: 0.75% 2% 0.75% 2%;
+    border-radius: 12%;
 }
 
 .project-info {
@@ -239,5 +286,78 @@ h1.underline {
     flex-wrap: wrap;
     flex-direction: column;
     width: 55%;
-    margin: 2% 0 3% 22.5%;
+    margin: 1% 0 3% 22.5%;
+}
+
+/* Experience Page Portions CSS */
+
+#experience {
+    width: 55%;
+    margin: 4% 0 0 22.5%;
+}
+
+#experience img {
+    float: left;
+    margin: 0 2.5% 0.75% 0;
+}
+
+#experience ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5%;
+}
+
+#experience li {
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin-bottom: 1%;
+    padding: 0.75% 2% 0.75% 2%;
+    border-radius: 12%;
+}
+
+/* About Page CSS */
+
+#about {
+    width: 55%;
+    margin: 4% 0 0 22.5%;
+}
+
+#about img {
+    float: left;
+    margin: 0 2.5% 0.75% 0;
+}
+
+/* Contact Form CSS */
+
+#contact-form {
+    color: white;
+    background-color: #345365;
+    width: 55%;
+    margin: 4% 0 0 22.5%;
+    padding: 1% 0 2% 2%;
+    border-radius: 20px;
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+}
+
+.input-group {
+    margin: 1.5% 0 1.5% 0;
+}
+
+.message {
+    margin-top: 1.5%;
+}
+
+.submit-button {
+    background-color: #D18181;
+    color: white;
+    border-radius: 12px;
+    margin-top: 3%;
+    width: 104%;
+    height: 60px;
 }

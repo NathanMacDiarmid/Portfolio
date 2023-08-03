@@ -5,6 +5,8 @@
         <title>Nathan MacDiarmid</title>
         <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
         <link rel="stylesheet" href="style.css">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="script.js"></script>
         <a href="home.html"></a>
     </head>
     <body>
@@ -23,69 +25,37 @@
             </div>
         </section>
 
-        <section id="project-header">
+        <section id="contact-form">
             <h2>
-                Project 1
+                Send me a message!
             </h2>
-            <br>
-            <ul>
-                <li>Java</li>
-                <li>Git</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>NodeJS</li>
-                <li>AWS</li>
-                <li>Selenium</li>
-                <li>SQL</li>
-                <li>XML</li>
-                <li>JSON</li>
-                <li>Jenkins</li>
-                <li>Jira</li>
-                <li>Java Threads</li>
-                <li>Agile</li>
-                <li>AI</li>
-                <li>Docker</li>
-                <li>UDP/IP Communcation</li>
-                <li>Design Patterns</li>
-                <li>Architecture Styles</li>
-            </ul>
-        </section>
-
-        <section id="project-video" class="project-info">
-            <iframe width="1000" height="450" src="https://www.youtube.com/watch?v=gRlLXuXwS_c" allow="encrypted-media"></iframe>
-        </section>
-
-        <hr class="left-line">
-        <hr class="right-line">
-
-        <section id="project-code" class="project-info">
-
-        </section>
-
-        <hr class="left-line">
-        <hr class="right-line">
-
-        <section id="project-description" class="project-info">
-            <p>
-                This is the project description portion where I break down the project stuff
-            </p>
-            <h3>
-                Why
-            </h3>
-            <p>
-                This is why
-            </p>
-            <h3>
-                How
-            </h3>
-            <p>
-                This is how
-            </p>
-            <h3>
-                Tools
-            </h3>
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <div class="input-group">
+                    <label>
+                        Name
+                    </label>
+                    <input type="text" id="name" placeholder="John Doe">
+                </div>
+                <div class="input-group">
+                    <label>
+                        Email
+                    </label>
+                    <input type="text" id="email" placeholder="johndoe@email.com">
+                </div>
+                <div class="input-group">
+                    <label>
+                        Subject
+                    </label>
+                    <input type="text" id="subject" placeholder="An Interesting Idea">
+                </div>
+                <label class="message">
+                    Message
+                </label>
+                <textarea id="message" rows="10" placeholder="Type your message here."></textarea>
+                <button type="submit" class="submit-button">
+                    Submit
+                </button>
+            </form>
         </section>
 
         <section id="footer">
