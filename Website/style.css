@@ -66,7 +66,7 @@ textarea {
 }
 
 #other-header {
-    background-image: url("../Background/Other\ Page\ Header.png");
+    background-image: url("../Photos/Other\ Page\ Header.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     margin-bottom: -2%;
@@ -74,7 +74,7 @@ textarea {
 
 #footer {
     color: white;
-    background-image: url("../Background/Pong_Footer.png");
+    background-image: url("../Photos/Pong_Footer.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-bottom: 10%;
@@ -115,7 +115,7 @@ textarea {
 /* Home Page CSS*/
 
 #home-header {
-    background-image: url("../Background/Pong_Header.png");
+    background-image: url("../Photos/Pong_Header.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-bottom: 7%;
