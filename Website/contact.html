@@ -34,24 +34,25 @@
                     <label>
                         Name
                     </label>
-                    <input type="text" id="name" placeholder="John Doe">
+                    <input type="text" required id="name" placeholder="John Doe">
                 </div>
                 <div class="input-group">
                     <label>
                         Email
                     </label>
-                    <input type="text" id="email" placeholder="johndoe@email.com">
+                    <input type="text" required id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                    title="Must be a valid email format ex: johndoe@email.com" placeholder="johndoe@email.com">
                 </div>
                 <div class="input-group">
                     <label>
                         Subject
                     </label>
-                    <input type="text" id="subject" placeholder="An Interesting Idea">
+                    <input type="text" required id="subject" placeholder="An Interesting Idea">
                 </div>
                 <label class="message">
                     Message
                 </label>
-                <textarea id="message" rows="10" placeholder="Type your message here."></textarea>
+                <textarea required id="message" rows="10" placeholder="Type your message here."></textarea>
                 <button type="submit" class="submit-button">
                     Submit
                 </button>
