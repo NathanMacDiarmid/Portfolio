@@ -78,9 +78,15 @@
             </h2>
             <br>
             <p>
-                The Floor subsystem was how instructions were passed from the user, a data.txt file, to
-                the other two subsystems, similar to how a regular elevator would work. Through asynchronous
-                communication, 
+                The Floor subsystem is how instructions are passed from the user, a data.txt file, to
+                the other two subsystems, similar to how a regular elevator would work. To begin, the Floor
+                organizes the instructions in order of occurrnce based on time before sending the commands one
+                by one to the Scheduler subsystem. Through asynchronous Java Thread or UDP communication, the
+                Floor sends puts the commands in a waiting area until the Scheduler picks them up.
+            </p>
+            <br>
+            <p>
+                The Scheduler subsystem
             </p>
             <br>
             <h2>
