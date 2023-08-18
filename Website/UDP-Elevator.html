@@ -82,11 +82,24 @@
                 the other two subsystems, similar to how a regular elevator would work. To begin, the Floor
                 organizes the instructions in order of occurrnce based on time before sending the commands one
                 by one to the Scheduler subsystem. Through asynchronous Java Thread or UDP communication, the
-                Floor sends puts the commands in a waiting area until the Scheduler picks them up.
+                Floor puts the commands in a waiting area until the Scheduler picks them up.
             </p>
             <br>
             <p>
-                The Scheduler subsystem
+                The Scheduler subsystem is how instructions are handled and passed to the correct elevator.
+                It determines the best elevator to send an instruction to based on a few metrics such as where
+                each elevator is relative to the incoming request and which direction they're going. Similarly
+                to the Floor subsystem, the Scheduler sends the instruction to chosen elevator's waiting area
+                until that elevator picks it up to execute.
+            </p>
+            <br>
+            <p>
+                The Elevator subsystem is the subsystem that handles executing all the instructions that are
+                passed properly. It handles the elevators moving up and down floors, picking up passengers,
+                and dropping them off on their correct floors. It also handles if there are any errors with
+                the elevator such as doors not opening or the elevator getting stuck. It sends these errors
+                back to the Scheduler so that the Scheduler can remove that elevator from the list of working
+                elevators.
             </p>
             <br>
             <h2>
