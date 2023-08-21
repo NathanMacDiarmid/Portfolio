@@ -103,11 +103,53 @@
             </p>
             <br>
             <h2>
-                How
+                Thought Process & Design
             </h2>
             <br>
             <p>
-                This is how
+                We began by building upon a lock and key example of Java Threads using mutual exclusion with a Chef, an
+                Agent, and a Table portion. The Chef is tasked with making peanut butter and jelly sandwiches. It consists
+                of three ingredients - peanut butter, jelly, and bread. The Agent provides two out of the three
+                ingredients and stores them on the Table. The Chef then takes the ingredients from the table and provides
+                the missing ingredients in order to complete the sandwich. In this case, the Table represents the lock or
+                critical section and can only be unlocked by either the Chef or Agent, depending on the state of the running Thread.
+            </p>
+            <br>
+            <p>
+                In the UDP Elevator case, the Scheduler was the critical section with the Floor putting instructions into the
+                critical section and the Elevator getting instructions.
+            </p>
+            <br>
+            <p>
+                We then improved on the critical section by implementing a state machine that decides which elevator to send an instruction
+                to. At this point, we had four elevators that needed to be properly scheduled with incoming requests. For this, we had to
+                write sudo code for how our state machine would make decisions. It took a few iterations to get the decision logic just right
+                so that it worked as an elevator should and properly sent correct elevators instructions.
+            </p>
+            <br>
+            <p>
+                After the state machine was implemented, we transitioned our backend from using Java Threads to handle communication, to
+                UDP/IP communication over ports. We used Datagram Packets and Sockets to implement the UDP functionality and spent a lot
+                of time transitioning how information was passed from Floor to Scheduler to Elevator and back again as the information
+                being passed needed to remain the same.
+            </p>
+            <br>
+            <p>
+                Finally, we implemented error handling throughout the software. We began by handling input faults that made sure that proper
+                commands were being sent from the data.txt file to the Floor. We also implemented handles for if an elevator's doors didn't
+                open or close. Our elevator handles the error gracefully and continues on its way to pick up and drop off passengers. We also
+                implemented error handling for if the elevator got stuck. This would send an error message back to the Scheduler letting it know
+                to take that elevator off the list of elevators.
+            </p>
+            <br>
+            <h2>
+                Final Thoughts
+            </h2>
+            <br>
+            <p>
+                Overall this project was very interesting and I definitely learned a lot about Java Threads and UDP/IP communcation. I also learned
+                how to plan an algorithm at the sudo level before its actually implemented and realized its importance. Furthermore, I learned how to
+                implement a state machine within a piece of software as the dicision maker.
             </p>
         </section>
 
