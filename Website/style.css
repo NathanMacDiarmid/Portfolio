@@ -211,7 +211,6 @@ h1.underline {
 }
 
 #home-project {
-    display: flex;
     color: white;
     max-width: 30%;
     border-radius: 25px;
@@ -220,7 +219,12 @@ h1.underline {
 }
 
 .home-project-text {
-    padding: 5% 1% 6% 3%;
+    padding: 5% 1% 6% 4%;
+}
+
+#home-project img {
+    float: right;
+    margin: 4% 4% 4% 4%;
 }
 
 #contact-me {
@@ -242,12 +246,16 @@ h1.underline {
 /* Project Page Portions CSS */
 
 #project {
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 55%;
     margin: 4% 0 2% 22.5%;
     border-radius: 20px;
+}
+
+#project img {
+    float: right;
+    margin: 1.5% 1.5% 1.5% 1.5%;
 }
 
 .project-text {
@@ -259,6 +267,7 @@ h1.underline {
     background-color: beige;
     width: 250px;
     height: 60px;
+    margin-top: 2.5%;
 }
 
 #project-header {
@@ -369,4 +378,51 @@ h1.underline {
     margin-top: 3%;
     width: 104%;
     height: 60px;
+}
+
+/* Home Page Adjustable */
+
+@media (max-width: 1849px) {
+    #home-project img {
+        margin: 2% 2% 2% 2%;
+    }
+}
+
+@media (max-width: 1768px) {
+    #home-project img {
+        width: 90px;
+        height: 105px;
+    }
+}
+
+@media (max-width: 1637px) {
+    #home-project img {
+        width: 70px;
+        height: 85px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 1505px) {
+    #home-project img {
+        width: 80px;
+        height: 95px;
+        margin: 3% 3% 0 3%;
+    }
+}
+
+@media (max-width: 1412px) {
+    #home-project img {
+        width: 40px;
+        height: 55px;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 1142px) {
+    #home-project img {
+        width: 20px;
+        height: 35px;
+        border-radius: 6px;
+    }
 }
