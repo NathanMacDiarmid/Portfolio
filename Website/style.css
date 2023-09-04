@@ -9,12 +9,21 @@
     font-family: 'IBM Plex Mono';
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: beige;
 }
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+canvas {
+    display: block;
+    background-color: #345365;
 }
 
 section {
@@ -112,13 +121,41 @@ textarea {
     width: 7%;
 }
 
+.to-top {
+    background-color: #D18181;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
 /* Home Page CSS*/
 
+#pong {
+    padding-left: 5%;
+    width: 90vw;
+    height: 90vh;
+}
+
 #home-header {
-    background-image: url("../Photos/Pong_Header.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding-bottom: 7%;
+    background-color: #345365;
     margin-top: 0;
     margin-bottom: 2%;
 }
@@ -160,6 +197,7 @@ textarea {
 }
 
 .intro div {
+    position: absolute;
     text-align: right;
     width: 45%;
     padding-top: 12%;
@@ -217,7 +255,7 @@ h1.underline {
 
 #home-project {
     color: white;
-    max-width: 30%;
+    max-width: 31.3%;
     border-radius: 25px;
     margin: 0 2% 2% 0;
     text-decoration: none;
@@ -242,6 +280,18 @@ h1.underline {
 }
 
 .contactme-button {
+    background-color: #D18181;
+    color: white;
+    width: 150%;
+    height: 60px;
+}
+
+.see-more {
+    margin: auto;
+    padding-right: 9%;
+}
+
+.see-more-button {
     background-color: #D18181;
     color: white;
     width: 150%;
@@ -280,9 +330,15 @@ h1.underline {
     margin: 4% 0 0 22.5%;
 }
 
+#project-header iframe {
+    width: 1058px;
+    height: 450px;
+}
+
 #project-header ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5%;
     margin: 2% 0 0 0;
 }
@@ -310,33 +366,6 @@ h1.underline {
     width: 25%;
     height: 60px;
     margin: 3% 0 2% 37%;
-}
-
-/* Experience Page Portions CSS */
-
-#experience {
-    width: 55%;
-    margin: 4% 0 0 22.5%;
-}
-
-#experience img {
-    float: left;
-    margin: 0 2.5% 0.75% 0;
-}
-
-#experience ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5%;
-}
-
-#experience li {
-    color: white;
-    background-color: black;
-    text-align: center;
-    margin-bottom: 1%;
-    padding: 0.75% 2% 0.75% 2%;
-    border-radius: 12%;
 }
 
 /* About Page CSS */
@@ -391,12 +420,21 @@ h1.underline {
     #home-project img {
         margin: 2% 2% 2% 2%;
     }
+
+    #project-header iframe {
+        width: 1000px;
+        height: 450px;
+    }
 }
 
 @media (max-width: 1768px) {
     #home-project img {
         width: 90px;
         height: 105px;
+    }
+
+    .see-more {
+        padding-right: 10%;
     }
 }
 
@@ -405,6 +443,11 @@ h1.underline {
         width: 70px;
         height: 85px;
         border-radius: 12px;
+    }
+
+    #project-header iframe {
+        width: 880px;
+        height: 450px;
     }
 }
 
@@ -428,6 +471,15 @@ h1.underline {
         width: 200px;
         height: 50px;
     }
+
+    .see-more {
+        padding-right: 12%;
+    }
+
+    #project-header iframe {
+        width: 825px;
+        height: 450px;
+    }
 }
 
 @media (max-width: 1412px) {
@@ -444,6 +496,11 @@ h1.underline {
     .navbar a {
         font-size: large;
         padding: 1.4% 1.4%;
+    }
+
+    #project-header iframe {
+        width: 780px;
+        height: 450px;
     }
 }
 
@@ -482,9 +539,13 @@ h1.underline {
     #footer br {
         content: "";
     }
-    .navbar a:not(:first-child) {display: none;}
-    .navbar a.icon {
-        float: right;
-        display: block;
+
+    .see-more {
+        padding-right: 14%;
+    }
+
+    #project-header iframe {
+        width: 600px;
+        height: 450px;
     }
 }

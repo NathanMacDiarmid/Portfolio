@@ -5,6 +5,7 @@
         <title>Nathan MacDiarmid</title>
         <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/b7deda2336.js" crossorigin="anonymous"></script>
         <a href="home.html"></a>
     </head>
     <body>
@@ -19,7 +20,7 @@
                     <a href="about.html" class="underline">About</a>
                     <a href="projects.html" class="underline">Projects</a>
                     <a href="home.html" class="underline">Home</a>
-                    <a href="home.html" class="logo"><img class="link" src="../Photos/namd_blue.png" alt="Logo" width="100" height="100"></a>
+                    <a href="home.html" class="logo"><img src="../Photos/namd_blue.png" alt="Logo" width="100" height="100"></a>
                 </h2>
             </div>
             <div class="intro">
@@ -34,7 +35,14 @@
                 </div>
                 <div></div>
             </div>
+            <canvas id="pong" width="1920" height="1080"></canvas>
+            <script src="pong.js"></script>
         </section>
+
+        <a href="" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <script src="scroll.js"></script>
 
         <section id="bio">
             <div>
@@ -169,7 +177,11 @@
                         user interface using JFrame.
                     </p>
                 </div>
-                
+            </a>
+            <a href="projects.html" class="see-more">
+                <button type="button" class="see-more-button">
+                    View other projects
+                </button>
             </a>
         </section>
 
