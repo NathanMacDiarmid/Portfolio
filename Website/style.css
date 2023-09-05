@@ -255,10 +255,16 @@ h1.underline {
 
 #home-project {
     color: white;
+    text-decoration: none;
     max-width: 31.3%;
     border-radius: 25px;
     margin: 0 2% 2% 0;
-    text-decoration: none;
+    box-shadow: 0px 3px 8px black;
+    transition: all 300ms ease-in;
+}
+
+#home-project:hover {
+    box-shadow: 0px 8px 30px 2px;
 }
 
 .home-project-text {
@@ -276,26 +282,39 @@ h1.underline {
     text-align: center;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 3%;
 }
 
 .contactme-button {
     background-color: #D18181;
     color: white;
+    box-shadow: 2px 2px 8px black;
+    transition: all 300ms ease-in;
     width: 150%;
     height: 60px;
+}
+
+.contactme-button:hover {
+    box-shadow: 0px 5px 20px 2px;
 }
 
 .see-more {
     margin: auto;
     padding-right: 9%;
+    padding-top: 2%;
 }
 
 .see-more-button {
     background-color: #D18181;
     color: white;
+    box-shadow: 2px 2px 8px black;
+    transition: all 300ms ease-in;
     width: 150%;
     height: 60px;
+}
+
+.see-more-button:hover {
+    box-shadow: 0px 5px 20px 2px;
 }
 
 /* Project Page Portions CSS */
@@ -303,9 +322,15 @@ h1.underline {
 #project {
     flex-wrap: wrap;
     justify-content: space-between;
+    box-shadow: 0px 3px 8px black;
+    transition: all 300ms ease-in;
     width: 55%;
     margin: 4% 0 2% 22.5%;
     border-radius: 20px;
+}
+
+#project:hover {
+    box-shadow: 0px 8px 30px;
 }
 
 #project img {
@@ -320,6 +345,8 @@ h1.underline {
 
 .view-project-button {
     background-color: beige;
+    box-shadow: 2px 2px 8px black;
+    transition: all 300ms ease-in;
     width: 250px;
     height: 60px;
     margin-top: 2.5%;
@@ -363,9 +390,15 @@ h1.underline {
 .src-code-button {
     background-color: #D18181;
     color: white;
+    box-shadow: 2px 2px 8px black;
+    transition: all 300ms ease-in;
     width: 25%;
     height: 60px;
     margin: 3% 0 2% 37%;
+}
+
+.src-code-button:hover {
+    box-shadow: 0px 5px 20px 2px;
 }
 
 /* About Page CSS */
@@ -490,7 +523,7 @@ h1.underline {
     }
 
     #contact-me {
-        gap: 7%;
+        gap: 4%;
     }
 
     .navbar a {
@@ -516,7 +549,7 @@ h1.underline {
     }
 
     #contact-me {
-        gap: 9%;
+        gap: 4%;
     }
 
     #project img {
