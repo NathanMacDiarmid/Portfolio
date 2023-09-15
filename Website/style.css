@@ -146,6 +146,11 @@ textarea {
     opacity: 1;
 }
 
+.disable-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 /* Home Page CSS*/
 
 #pong {
@@ -191,7 +196,7 @@ textarea {
 .hamburger {
     float: right;
     display: block;
-    margin: 20px -5px;
+    margin: 20px;
     width: 35px;
     cursor: pointer;
     appearance: none;
@@ -231,7 +236,7 @@ textarea {
     width: 100%;
     height: 100vh;
     z-index: 98;
-    margin-top: 13vh;
+    margin-top: 9.5%;
     background-color: #345365;
     transition: 0.7s;
 }
@@ -242,10 +247,11 @@ textarea {
 
 .mobile-navbar a {
     display: block;
+    border-radius: 12px;
     width: 100%;
-    max-width: 200px;
+    max-width: 80%;
     margin: 0 auto 16px;
-    padding: 12px 16px;
+    padding: 2% 16px;
     text-align: center;
     background-color: #D18181;
     color: white;
@@ -526,14 +532,6 @@ h1.underline {
         width: 1000px;
         height: 450px;
     }
-
-    .hamburger {
-        display: none;
-    }
-
-    .mobile-navbar {
-        display: none;
-    }
 }
 
 @media (max-width: 1768px) {
@@ -544,14 +542,6 @@ h1.underline {
 
     .see-more {
         padding-right: 10%;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .mobile-navbar {
-        display: none;
     }
 }
 
@@ -566,14 +556,6 @@ h1.underline {
         width: 880px;
         height: 450px;
     }
-
-    .hamburger {
-        display: none;
-    }
-
-    .mobile-navbar {
-        display: none;
-    }
 }
 
 @media (max-width: 1505px) {
@@ -584,7 +566,7 @@ h1.underline {
     }
 
     .navbar a {
-        padding: 1.1% 1%;
+        padding: 1.3% 1%;
     }
 
     #project img {
@@ -605,14 +587,6 @@ h1.underline {
         width: 825px;
         height: 450px;
     }
-
-    .hamburger {
-        display: none;
-    }
-
-    .mobile-navbar {
-        display: none;
-    }
 }
 
 @media (max-width: 1412px) {
@@ -628,20 +602,12 @@ h1.underline {
 
     .navbar a {
         font-size: large;
-        padding: 1.4% 1.4%;
+        padding: 1.7% 1.4%;
     }
 
     #project-header iframe {
         width: 780px;
         height: 450px;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .mobile-navbar {
-        display: none;
     }
 }
 
@@ -690,19 +656,21 @@ h1.underline {
         height: 450px;
     }
 
-    .hamburger {
-        display: block;
-    }
-
-    .mobile-navbar {
-        display: block;
-    }
-
     .link {
         display: none;
     }
 
     a.underline {
+        display: none;
+    }
+}
+
+@media (min-width: 1142px) {
+    .hamburger {
+        display: none;
+    }
+
+    .mobile-navbar {
         display: none;
     }
 }
