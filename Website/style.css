@@ -74,41 +74,26 @@ textarea {
     background-color: #D18181;
 }
 
-#other-header {
-    background-image: url("../Photos/Other\ Page\ Header.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin-bottom: -2%;
-}
-
-#footer {
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
     color: white;
-    background-image: url("../Photos/Pong_Footer.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding-bottom: 10%;
-    margin: 4% 0 0 0;
+    text-decoration: none;
+    background-color: #345365;
+    height: 10vh;
+    padding: 10% 0 10% 0;
+    gap: 50%;
 }
 
-.right-footer {
-    float: right;
-    text-align: right;
-    padding: 3% 5% 0 0;
-}
-
-.right-footer a {
+.footer a {
     color: white;
     text-decoration: none;
 }
 
-.right-footer a:hover {
+.footer a:hover {
     color: #D18181;
-}
-
-.left-footer {
-    float: left;
-    text-align: left;
-    padding: 3% 0 0 5%;
 }
 
 .left-line {
@@ -151,7 +136,7 @@ textarea {
     overflow: hidden;
 }
 
-/* Home Page CSS*/
+/* Header CSS*/
 
 #pong {
     padding-left: 5%;
@@ -159,10 +144,8 @@ textarea {
     height: 90vh;
 }
 
-#home-header {
+.home-header {
     background-color: #345365;
-    margin-top: 0;
-    margin-bottom: 2%;
 }
 
 .navbar {
@@ -196,7 +179,7 @@ textarea {
 .hamburger {
     float: right;
     display: block;
-    margin: 20px;
+    margin: 3%;
     width: 35px;
     cursor: pointer;
     appearance: none;
@@ -265,6 +248,8 @@ textarea {
 .link {
     border-radius: 2%;
 }
+
+/* Home Page CSS */
 
 .intro {
     color: white;
@@ -521,7 +506,7 @@ h1.underline {
     height: 60px;
 }
 
-/* Home Page Adjustable */
+/* Page Adjustable */
 
 @media (max-width: 1849px) {
     #home-project img {
@@ -612,6 +597,16 @@ h1.underline {
 }
 
 @media (max-width: 1142px) {
+    #bio {
+        padding: 1% 0 2% 3%;
+        width: 95%;
+    }
+
+    #home-projects {
+        padding: 3% 0 0 3%;
+        width: 95%;
+    }
+
     #home-project img {
         width: 30px;
         height: 45px;
@@ -623,37 +618,52 @@ h1.underline {
     }
 
     #contact-me {
+        padding-top: 5%;
         gap: 4%;
+    }
+
+    #project {
+        margin: 6% 0 3% 3%;
+        width: 95%;
     }
 
     #project img {
         width: 125px;
         height: 140px;
     }
-    
-    .right-footer {
-        padding: 0.25% 5% 0 0;
-    }
-    
-    .right-footer a {
-        display: flex;
-        justify-content: flex-end;
-        font-size: small;
-        color: white;
-        text-decoration: none;
-    }
-
-    #footer br {
-        content: "";
-    }
 
     .see-more {
-        padding-right: 14%;
+        padding-right: 11%;
+    }
+
+    #project-header {
+        margin-left: 2.5%;
+        text-align: center;
+        width: 95%;
+    }
+
+    .src-code-button {
+        margin: 3%;
     }
 
     #project-header iframe {
-        width: 600px;
+        width: 900px;
         height: 450px;
+    }
+
+    .project-info {
+        margin: 4% 0 3% 3%;
+        width: 95%;
+    }
+
+    #about {
+        width: 95%;
+        margin: 4% 0 3% 3%;
+    }
+
+    #contact-form {
+        margin-left: 1.5%;
+        width: 95%;
     }
 
     .link {
