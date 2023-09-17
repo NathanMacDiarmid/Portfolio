@@ -71,24 +71,118 @@
         <hr class="right-line">
 
         <section class="project-info">
+            <h2>
+                Project Goal
+            </h2>
+            <br>
             <p>
-                This is the project description portion where I break down the project stuff
+                This project was proposed to my team and I by my introduction to object-oriented programming class during my
+                studies at Carleton University. It was my first exposure to Java as a language and the idea of object-oriented
+                programming. The goal was to create a basic shopping application complete with a user interface and inventory.
             </p>
-            <h3>
-                Why
-            </h3>
+            <br>
+            <h2>
+                Project Breakdown
+            </h2>
+            <br>
             <p>
-                This is why
+                I did not know this while completing the project, but in the later stages of my degree, I’ve realized this project
+                follows a modified Model View Controller (MVC) architecture and the classes are broken down as such:
             </p>
-            <h3>
-                How
-            </h3>
+            <br>
+            <ul>
+                <li>Interface</li>
+                <li>Manager class (model)</li>
+                <li>View class (view & controller)</li>
+            </ul>
+            <br>
             <p>
-                This is how
+                However, we did not extrapolate the actions or controller class from the view as we had not learned about it yet.
             </p>
-            <h3>
-                Tools
-            </h3>
+            <br>
+            <p>
+                A Product is a simple class containing a name, an identification number, and a price. It only contains getters as
+                these attributes can only be set with the constructor. The price and id can’t be less than one.
+            </p>
+            <br>
+            <p>
+                The interface was made in the ProductStockContainer class and set methods that needed to be used by any class that
+                implemented it. All classes implementing it needs to have a getProductQuantity(), an addProductQuantity(), a
+                removeProductQuantity(), and a getNumOfProducts(). This is to ensure that Products can be added and removed from
+                the Inventory as well as the ShoppingCart.
+            </p>
+            <br>
+            <p>
+                The Inventory is a container that holds all the different Products as well as their quantity. It implements the
+                ProductStockContainer interface, meaning it must implement the four methods listed above. There can also be a case
+                where the store has a Product but has not quantity left.
+            </p>
+            <br>
+            <p>
+                The ShoppingCart extends Inventory, using all its methods and implementing ProductStockContainer as well. It is a
+                sub-class of Inventory as customers need the ability to add Products to their carts, creating their own sub-Inventory.
+            </p>
+            <br>
+            <p>
+                The StoreManager (model) contains all the business logic of the system. It draws upon and manipulates the Inventory, adding
+                or removing Product. It also can add Product to the ShoppingCart, by removing Product from the Inventory and adding it to a
+                customer’s ShoppingCart. If the customer does not checkout with those Products, they are removed from the ShoppingCart and
+                adding back to the Inventory for other customers to purchase.
+            </p>
+            <br>
+            <p>
+                The StoreView (view and controller) contains all the rendering for the user interface using Swing. Since we had not learned
+                about the MVC architecture yet, the action buttons (controller portion) for when a customer adds, removes, or checks out with
+                Products are also included in this file. It also contains a reference to the StoreManager so that the action buttons can call
+                its methods when a customer clicks them.
+            </p>
+            <br>
+            <h2>
+                Thought Process & Design
+            </h2>
+            <br>
+            <p>
+                We began by creating a basic store with the StoreManager, Product, and Inventory. To use all the functionality, we set a main()
+                method in StoreManager that created Product, added it to the Inventory. In the main() method, we also used the StoreManager to add,
+                remove, and return various lists of Product.
+            </p>
+            <br>
+            <p>
+                We then implemented the ProductStockContainer interface so that any class that implemented it needed to have the four get, add, and
+                remove methods. We then made Inventory implement this interface as going forward we would need it to follow this interface.
+            </p>
+            <br>
+            <p>
+                Following the creation of the interface, we created the ShoppingCart which we made extend Inventory and implement ProductStockContainer
+                so that customers were able to add and remove Product from their cart. We continued using the main() method, now adding the ShoppingCart
+                functionalities.
+            </p>
+            <br>
+            <p>
+                Finally, we created the StoreView class using Swing so that the customer would be able to view and purchase various items with buttons. We
+                then moved the main() method into StoreView as it needed to render the user interface. It created an instance of the StoreManager which automatically
+                creates an instance of Inventory, and four products that customers could purchase. In our case, our store was a bookstore, so we sold textbooks for four
+                of our classes. Finally, it created a StoreView instance and rendered the user interface, including photos.
+            </p>
+            <br>
+            <h2>
+                Final Thoughts
+            </h2>
+            <br>
+            <p>
+                Overall, this project was very fun! It was the first time that I was exposed to object-oriented programming, and I absolutely loved it. The way I was able
+                to separate each of the classes and instances so that it didn’t look like or feel like spaghetti code amazed me.
+            </p>
+            <br>
+            <p>
+                Additionally, I learned a lot about creating basic user interfaces using Swing, which is something that intrigued me as I was always curious as to how
+                developers made user interfaces attached to pieces of software.
+            </p>
+            <br>
+            <p>
+                Looking back at the project, I would separate the StoreView class into a view which only renders the user interface and a controller which handles all the
+                button actions. I would also potentially separate the StoreView into different parts of the user interface so that the code is easier to read.
+            </p>
         </section>
         <script src="scroll.js"></script>
     </body>

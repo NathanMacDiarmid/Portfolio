@@ -446,6 +446,10 @@ h1.underline {
     margin: 2% 0 3% 22.5%;
 }
 
+.project-info ul {
+    list-style-type: disc;
+}
+
 .src-code-button {
     background-color: #D18181;
     color: white;

@@ -69,24 +69,125 @@
         <hr class="right-line">
 
         <section class="project-info">
+            <h2>
+                Project Goal
+            </h2>
+            <br>
             <p>
-                This is the project description portion where I break down the project stuff
+                This project was my first ever project. It was proposed to me during my Introduction to Software Engineering
+                class in my first year of university. The goal of the project was to create a photo editing application that
+                using the terminal as a user interface. It would allow users to upload a photo to the software and apply one
+                or various filters from a list of programmed filters. The user would then be able to save this filtered photo
+                to their computer.
             </p>
-            <h3>
-                Why
-            </h3>
+            <br>
+            <h2>
+                Project Breakdown
+            </h2>
+            <br>
             <p>
-                This is why
+                The project was broken down into five different types of files:
             </p>
-            <h3>
-                How
-            </h3>
+            <br>
+            <ul>
+                <li>Cimpl.py</li>
+                <li>User interface</li>
+                <li>Image filters</li>
+                <li>Batch files</li>
+                <li>Testing files</li>
+            </ul>
+            <br>
             <p>
-                This is how
+                The project relied on a library called Cimpl.py. It was supplied by Carleton University and contained many functions
+                to allow for the manipulation of images through their pixels. We mainly used the copy, the get and set colour, and
+                the get height and width functions of the Cimpl.py library. This was all we needed to be able to manipulate the pixels
+                of an image and return the edited image to the user.
             </p>
-            <h3>
-                Tools
-            </h3>
+            <br>
+            <p>
+                The user interface was executed through the terminal using command lines inputted by the user. T28_interactive_ui.py
+                contains a list of all the different colours that can be used to apply different filters to images. It also contains
+                a dictionary of all the different image filters that a user can apply to an image. The dictionary keys are linked to
+                the filters themselves, so when a user inputs ‘P’ for example, the posterize filter is applied to the image and returned
+                to the user.
+            </p>
+            <br>
+            <p>
+                All the image filters are stored in T28_image_filters.py. It contains filters such as green_channel, which applies a green
+                tint to the image supplied. All these filters create a copy of the given image, change the RGB codes on the copied image
+                and returned the copied image to the user. T28_image_filters.py also contains a list of all the colours and a list of all
+                the RGB codes attached to them. For example, the RGB code for black is (0, 0, 0) and both ‘black’ and ‘(0, 0, 0)’ are stored
+                in the first position of each list so they can be indexed together.
+            </p>
+            <br>
+            <p>
+                The batch files are used for testing the image filters. T28_bath_ui.py contains all the commands needed to read the batchfile.txt
+                file and perform all the tests included. These tests include a test image (dog.jpg) and apply three different filters to the image,
+                checking after each filter is applied that they are correctly applied and the RGB codes are correctly modified.
+            </p>
+            <br>
+            <p>
+                There is also a designated testing file that tests every image filter, making sure they are functioning properly. Each of the filters
+                take a subset of the images and run the tests against that subset, ensuring that each of the pixels have the intended RGB colour code.
+            </p>
+            <br>
+            <h2>
+                Thought Process & Design
+            </h2>
+            <br>
+            <p>
+                We began this project by reading through the Cimpl.py library and familiarizing ourselves with the functions it contained and their functionality.
+                We then learned how to use these functions in our own created functions, allowing us to create image filters that changed the RGB codes in the
+                image provided.
+            </p>
+            <br>
+            <p>
+                We started very simple, by adding a blue, red, and green filter which gave the image a blue, red, or green tint. We did this by changing the first,
+                second, or third RGB code (for context (0, 0, 0) is indexed 1, 2, and 3) to either blue, red, or green. For example, if we set the colour code to
+                (0, g, 0), it would apply the green filter. Whereas if set the colour code to (r, 0, 0), it would apply the red filter. We finished off this first
+                deliverable by creating test cases for the blue, red, and green filters and proceeded to do so with the remaining filters in this project
+            </p>
+            <br>
+            <p>
+                In the next iteration, we added the two and three tone filters, extreme contrast, sepia, and posterize filters. The two and three tone filters take
+                colours inputted by the user and change the RGB codes, so they only contain those two or three colours. The extreme contrast filters set all the RGB
+                codes to their maximum contrast. The sepia filter applied a grey and yellow tint to an image by multiplying the red and blue portions of an image by
+                a percentage, depending on the already existing red scale. Finally, the posterize filter set colour of the middle pixel of the image to the rest of
+                the image’s pixels.
+            </p>
+            <br>
+            <p>
+                In the final iteration, we added the edge detection, improved edge detection, vertical flip, and horizontal flip filters. The edge detection and improved
+                edge detection filters enhanced pinpointed the contrast set on each of the pixels. For both filters, if a pixel was above a certain level of contrast, the
+                pixel was automatically set to black or white. The vertical and horizontal flip filters flip the image vertically or horizontally, based on the names of
+                the filters respectively.
+            </p>
+            <br>
+            <p>
+                We finished off by creating the batch files and user interface to interpret them. We were provided an image of a dog (dog.jpg) to do all our testing and used
+                it in our batch.txt file for when the batch user interface read that file. We made the batch user interface so that the text file needed to supply at least
+                one filter to a max of three filters to be applied on one image. We also made the user interface in a way that the text file could include multiple lines and
+                various images, and each of those lines would be executed separately.
+            </p>
+            <br>
+            <h2>
+                Final Thoughts
+            </h2>
+            <br>
+            <p>
+                With this being my first taste of software development, I was absolutely hooked. I was full of curiosity about software and the industry since the class began and
+                I always sat in the front so I could ask questions to get a very solid base of software knowledge.
+            </p>
+            <br>
+            <p>
+                This project let me put into practice my very limited knowledge of software at the time. I was also able to learn many different things that I didn’t know existed within
+                software development, such as different data types and basic user interfaces through a terminal.
+            </p>
+            <br>
+            <p>
+                Since this project, I have had a knack for developing various types of software either during projects at school or on my own time. This project can be marked as the starting
+                point to my obsession with software and its development.
+            </p>
         </section>
         <script src="scroll.js"></script>
     </body>

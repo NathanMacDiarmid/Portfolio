@@ -75,24 +75,139 @@
         <hr class="right-line">
 
         <section class="project-info">
+            <h2>
+                Project Goal
+            </h2>
+            <br>
             <p>
-                This is the project description portion where I break down the project stuff
+                The Monopoly project was proposed to my team and I as part of my course work towards my Software
+                Engineering degree at Carleton University. The goal was to develop a Monopoly game using the Model
+                View Controller Architecture. In later project iterations, we were also required to implement different
+                loadable boards that could be loaded into and played with via XML files. We were also instructed to have
+                users save and load their games via XML files, allowing them to load saved games and continue from where
+                they left off. Towards the end of the project, we were also instructed to implement an AI that would allow
+                users to play alone with the AI playing automatically by itself.
             </p>
-            <h3>
-                Why
-            </h3>
+            <br>
+            <h2>
+                Project Breakdown
+            </h2>
+            <br>
             <p>
-                This is why
+                All the files were broken down into seven categories:
             </p>
-            <h3>
-                How
-            </h3>
+            <br>
+            <ul>
+                <li>Model</li>
+                <li>View</li>
+                <li>Controller</li>
+                <li>SAX Handler</li>
+                <li>Special Space</li>
+                <li>Players</li>
+                <li>Properties</li>
+            </ul>
+            <br>
             <p>
-                This is how
+                In our case, we only used one Model called the “MonopolyModel”, and it handled all the business logic for the
+                entire game. It organized and properly called all the Action Listeners from different files so that a user can play
+                Monopoly the way it is intended to be played.
             </p>
-            <h3>
-                Tools
-            </h3>
+            <br>
+            <p>
+                A View file is responsible for rendering what the users sees, it is a direct mirror of what is implemented in the business 
+                logic or “MonopolyModel”. In our case, we have one called the “MonopolyView” and it contains the user interface rendering
+                including the board, properties, and various buttons.
+            </p>
+            <br>
+            <p>
+                Controller files are responsible for controlling all the actions that are inputted by a user playing Monopoly via Action
+                Listeners. For example, if a player lands on “Boardwalk” and wants to buy the property, they must click the “Buy Property”
+                button. This triggers an Action Listener that allows the “MonopolyModel” to execute a player buying that specific property
+                and adds it to that players list of properties.
+            </p>
+            <br>
+            <p>
+                The SAX Handler files handle all the XML parsing. This is what allowed users to load in different boards as well as save
+                and load current and previous games.
+            </p>
+            <br>
+            <p>
+                A Special Space is an iconic Monopoly space such as “Go”, “Go to Jail”, “Jail”, and “Free Parking”. These spaces take up the
+                four corners of any board and have very specific logic. For example, the “Go to Jail” space automatically moves the player to
+                the “Jail” space and keeps them there for three turns unless they role doubles or pay.
+            </p>
+            <br>
+            <p>
+                A player can join the game to a maximum of four players. This includes up to three AI players. Each player has the option to
+                buy and sell properties they land on or own, as well as placing houses and hotels on properties where they own the entire set.
+                The AI, however, plays automatically, buying each property it lands on regardless of the current game scenario, unless it doesn’t
+                have enough money. If any type of player lands on a property that another player owns, the rent amount is automatically subtracted
+                from the player that landed on the property and moved to the property owners’ funds.
+            </p>
+            <br>
+            <p>
+                Properties all have the same features:
+            </p>
+            <br>
+            <ul>
+                <li>Buy</li>
+                <li>Sell</li>
+                <li>Add House</li>
+                <li>Add Hotel</li>
+            </ul>
+            <br>
+            <p>
+                These features can be done at the beginning of each player’s turn or if they land on a property. There are also a few properties that
+                don’t allow buying houses and have a minor logic difference than regular properties. “Railroad” and “Utilities” are the two properties
+                on each board that a player can purchase but isn’t allowed to place houses or hotels. For example, the “Utilities” properties pay the
+                owner rent based on the amount of “Utilities” properties the owner owns and the number on the offending player’s dice.
+            </p>
+            <br>
+            <h2>
+                Thought Process & Design
+            </h2>
+            <br>
+            <p>
+                We began by creating a simple example of the MVC Architecture as part of a lab for this class. We had a simple View which was rendered
+                from the Model and had buttons that were controlled by the Controller. This lab only had three files, a lot smaller scale than the Monopoly project.
+            </p>
+            <br>
+            <p>
+                We then built upon this basic example by creating multiple Views and Controllers that oversaw rendering different portions of the Model.
+            </p>
+            <br>
+            <p>
+                We began by creating the Model, Player, and Dice logic which didn’t quite allow us to play yet but did a lot of the up-front logic work so that it would
+                be easier to play. We then implemented a board using XML and SAX parsing, allowing for the boards to be loaded into the game. Next, we added a View and
+                Controllers for each of the buttons and properties, allowing the game to finally be played on a base state.
+            </p>
+            <br>
+            <p>
+                The Controllers were split up into various classes that controlled a very specific type of action. For example, there is a specific Controller for adding
+                houses and hotels to properties. We did this because it allowed the Controller idea to be decoupled and the Controller files quite small and easy to navigate.
+            </p>
+            <br>
+            <p>
+                With our base game up and running, we then were tasked with creating different boards that could be selected at startup and loaded into the game using the SAX
+                parsing that we had already implemented. After this, we were tasked with allowing players to save and load current and past games. The games were saved and loaded
+                from an XML file, including player properties, amount of money, position, etc.
+            </p>
+            <br>
+            <p>
+                In the final iteration, we were tasked with creating an artificial intelligence which would allow users to play alone or add AI player(s) to their game. We chose
+                to make the AI by creating a separate Player class that had different logic. For example, if the AI lands on a property, it will automatically buy the property
+                unless it can’t afford it. Similar to the Player, the funds are automatically moved from an AI to another AI or a player.
+            </p>
+            <br>
+            <h2>
+                Final Thoughts
+            </h2>
+            <br>
+            <p>
+                Overall, this was a really fun project that allowed us to create a basic computer game complete with saving, loading and AI functionalities. I learned that you don’t
+                necessarily need to train a neural network to create an AI as well as how to save and load different files into games. Additionally, I learned how to separate and
+                decouple various parts of a software program so that it is easier to read and navigate when making changes.
+            </p>
         </section>
         <script src="scroll.js"></script>
     </body>

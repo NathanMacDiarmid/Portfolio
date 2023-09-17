@@ -47,15 +47,21 @@
                 Portfolio
             </h2>
             <br>
-            <iframe width="1000" height="450" src="../Videos/Eric Wang's Personal Room-20220714 1905-3.mp4"></iframe>
+            <p>
+                This static website uses a collection of HTML, CSS and JavaScript
+                which was then deployed on AWS. Anything regarding the development of this website,
+                as well as source code can be found here.
+            </p>
+            <br>
             <ul>
                 <li>Figma</li>
-                <li>Communication</li>
-                <li>Teamwork</li>
-                <li>IBM Cloud</li>
-                <li>Architecture Styles</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>AWS</li>
+                <li>GitHub</li>
             </ul>
-            <a href="https://github.com/NathanMacDiarmid/FoobarChallenge">
+            <a href="https://github.com/NathanMacDiarmid/Portfolio" target="_blank" rel="noopener noreferrer">
                 <button type="button" class="src-code-button">
                     View Source Code
                 </button>
@@ -66,24 +72,118 @@
         <hr class="right-line">
 
         <section class="project-info">
+            <h2>
+                Project Goal
+            </h2>
+            <br>
             <p>
-                This is the project description portion where I break down the project stuff
+                This portfolio website has been something that I’ve been wanting to do for a long time, and for
+                it to finally come to fruition is quite a personal accomplishment for myself. The goal I set for this
+                project was to display all my projects and self-accomplishments on a self-made portfolio that I could use
+                to send employers. I also wanted to learn how to deploy a web application from start to finish, from coding my
+                first HTML tags and styling them with CSS, to deploying it on Amazon Web Services (AWS). Now that it's released, 
+                it serves as my personal playground for anything web development related.
             </p>
-            <h3>
-                Why
-            </h3>
+            <br>
+            <h2>
+                Project Breakdown
+            </h2>
+            <br>
             <p>
-                This is why
+                This project was broken down into four file types:
             </p>
-            <h3>
-                How
-            </h3>
+            <br>
+            <ul>
+                <li>HTML page files</li>
+                <li>HTML project page files</li>
+                <li>JavaScript files</li>
+                <li>CSS file</li>
+            </ul>
+            <br>
             <p>
-                This is how
+                The HTML page files contain the HTML code for any of the pages on the website. It laid out
+                all of the skeletal structures of the website so it was easy for the CSS to apply changes and
+                styling to each of the specific tags or classes.
             </p>
-            <h3>
-                Tools
-            </h3>
+            <br>
+            <p>
+                The HTML project page files contain the HTML code specifically related to each project. They all
+                contain a video (if there is one), a link to the source code or documentation, and a breakdown (this)
+                of how that project was completed.
+            </p>
+            <br>
+            <p>
+                It also contains a few JavaScript files that handle specific tasks. At the moment, it includes the Pong
+                game, functionality for the contact form, and the functionality for the scroll to top button.
+            </p>
+            <br>
+            <p>
+                Finally, everything is styled via a single CSS file. It contains all classes, id’s and various global
+                CSS stylings specifically related to HTML, all divs, or the entire website for example.
+            </p>
+            <br>
+            <h2>
+                Thought Process & Design
+            </h2>
+            <br>
+            <p>
+                Throughout my co-op term at IBM, I worked on Planning Analytics, a web application that allows companies
+                to analyze their business data. Although I spent a year of my time working on PA at IBM, I was mainly focused
+                on writing JavaScript in order to manipulate the DOM, providing test suites for PA. Toward the end of my time there,
+                I began receiving development tasks, editing the CSS and SCSS. Because of this co-op term, I was really intrigued by
+                the concept of web development, and wanted to know how to create a web app from start to finish.
+            </p>
+            <br>
+            <p>
+                Before I began the actual coding portion of the website, I used Figma, a graphic designing software, to create a prototype
+                of my website. This included how I wanted it to look, animation ideas, colour codes, and header images. I used Figma because
+                it integrates really well with web development as it will give direct colour codes as well as HTML and CSS code for specific
+                spacing, allowing me to get the exact spacing I needed for a specific feature.
+            </p>
+            <br>
+            <p>
+                With a basic knowledge of how HTML and CSS worked and how they integrated together, I began this project by improving my knowledge
+                of HTML and CSS, learning on the fly. As the project progressed, my skills and knowledge of how HTML should be laid out so that it's
+                easier for CSS to manipulate it, definitely improved.
+            </p>
+            <br>
+            <p>
+                I learned how to properly format HTML tags such as divs and sections so that the CSS could properly format them into either flex boxes,
+                or have them float inside a flexbox. I had to use both technologies in this website as there were times that I needed to float divs or text
+                to one side of the screen and the justify-content flex box command wouldn’t work; or I needed the text to wrap around a portion of the flex box,
+                for example, I floated my image on the ‘About’ page so that the text wrapped around the image.
+            </p>
+            <br>
+            <p>
+                I also decided to use an application programming interface (API) to an SMTP server so that I can have emails sent directly to my email from my
+                website via the contact form. I did this using JavaScript and the Elastic Email API. I used the secure token linked to my account so that emails
+                can be sent safely without my personal email and password being stored on the source code.
+            </p>
+            <br>
+            <p>
+                In my Figma prototype, I had an image of a Pong game, which I used as a placeholder for the ‘Home’ page’s header until the Pong JavaScript game
+                was finished. I did this using ChatGPT to create the pong game canvas itself, which I inserted into my code. I then edited the given code so that
+                it formatted correctly into my website home page. Lastly, I personally added the divider in the middle so that it felt closer to a real Pong game
+                than just to paddles hitting a ball back and forth.
+            </p>
+            <br>
+            <p>
+                The last JavaScript file that I developed with this release of my website was the scroll to top button. I wanted to give users to constantly have access
+                to the navigation bar at the top of the website. To solve this issue, I implemented a scroll to top button that appears on every page once you scroll down
+                a small amount from the top of the page. The JavaScript for this button is an EventListener, which waits for the user to scroll down 100 pixels from the top
+                of the page. If a user scrolls back to the top of the page, the button disappears. Finally, when a user clicks the button, it automatically brings the user back
+                to the top of that specific page, giving them access to the navigation bar at the top of each page.
+            </p>
+            <br>
+            <h2>
+                Final Thoughts
+            </h2>
+            <br>
+            <p>
+                Overall, I really enjoyed this project and will continue to enjoy this project as it will be in a constant state of development. I learned a lot about web development
+                and certainly satisfied my goal of learning how to develop a web application from start to finish. I am glad to have added web development to my tool set and am looking
+                forward to adding new features as time progresses.
+            </p>
         </section>
         <script src="scroll.js"></script>
     </body>

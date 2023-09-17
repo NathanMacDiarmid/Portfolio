@@ -72,24 +72,119 @@
         <hr class="right-line">
 
         <section class="project-info">
+            <h2>
+                Project Goal
+            </h2>
+            <br>
             <p>
-                This is the project description portion where I break down the project stuff
+                This project was proposed to me during my studies toward my Software Engineering degree at Carleton
+                University during the course COMP 3005 - Database Management Systems. The goal of this project was to
+                spend the entire term gradually building a database system from what we were taught in class. The final
+                product needed to be a fully functional SQL database with a user interface to perform a function or search
+                functionality.
             </p>
-            <h3>
-                Why
-            </h3>
+            <br>
+            <h2>
+                Project Breakdown
+            </h2>
+            <br>
             <p>
-                This is why
+                This project was broken down into four different steps throughout the semester:
             </p>
-            <h3>
-                How
-            </h3>
+            <br>
+            <ul>
+                <li>Schema</li>
+                <li>Entity relationship model (ER) model</li>
+                <li>SQL database</li>
+                <li>User interface</li>
+            </ul>
+            <br>
             <p>
-                This is how
+                The schema is a collection of tables that contain attributes. These help differentiate
+                the entities and their attributes in an easy to read format. The schema that was made also
+                had general assumptions to aid in avoiding possible confusion regarding the different entities.
             </p>
-            <h3>
-                Tools
-            </h3>
+            <br>
+            <p>
+                An entity is a real word thing, something that can hold different properties whereas an attribute
+                is a property of the entity. For example, my name is Nathan and I have blue eyes and blonde hair.
+                The entity would be myself and the attributes would be blue eyes and blonde hair. The relationship
+                part of ER model is how different entities interact and relate with each other.
+            </p>
+            <br>
+            <p>
+                The entity relationship model (ER model) is a diagram that depicts all the entities in relation to
+                one another. It also contains all their attributes and primary key(s) that each entity may use.
+            </p>
+            <br>
+            <p>
+                The SQL database file was made with SQL queries and stored in the already existing database file.
+                It also contains queries to access different information stored in the database file tables such as
+                getting an attribute.
+            </p>
+            <br>
+            <p>
+                The user interface calls the SQL queries within the SQL file and displays them to the user. This
+                allows a non-technical user to use and access the created database
+            </p>
+            <br>
+            <h2>
+                Thought Process & Design
+            </h2>
+            <br>
+            <p>
+                At the beginning of the semester, we were asked to choose a topic for our final project and told that it
+                needed to be a database with a user interface. I decided that a class database would useful and a cool design,
+                so that is the idea that I decided.
+            </p>
+            <br>
+            <p>
+                The schema was the first part to be created as it was early in the semester, and we had just begun learning about
+                the structure of SQL databases. We needed to have at least three entities, each with at least one primary key that
+                could be used to access an exact portion of the data. For example, a student number would be used to access a student’s
+                name, program, email, and grade point average.
+            </p>
+            <br>
+            <p>
+                The ER model was the following part that needed to be created, as it depicts how each of the tables, or entities react
+                with one another and their attributes. There needed to be at least two N to N relationships between entities, meaning that
+                each entity can have any number of itself and can interact with any number of other entities.
+            </p>
+            <br>
+            <p>
+                Each of the entities only interact with another specific entity in this case. The Students only interact with the Classes
+                and the Classes only interact with the Professors. The Professors may not interact directly with the Students or vice versa
+                for the purposes of the database. However, the Students can see Professors information if they are teaching a Class and Professors
+                can see Students information in the Class they are teaching.
+            </p>
+            <br>
+            <p>
+                The SQL database was made using an SQL file that inserted data into a database file. It creates the three different tables of Students,
+                Classes and Professors, and inserts all the respective data into those tables in the database file. All the data is respective to the ER
+                model, for example, each student has a name, student number, email, program, grade point average, and lists of current, past, and future
+                required classes.
+            </p>
+            <br>
+            <p>
+                I created the user interface by using Python to display a window with multiple different search buttons and hidden windows that displayed
+                queries results from the database file linked within the Python file. It then had various functions that used SQL queries to search through
+                the database and display results on the given windows. These queries could show the current Classes that a Student is taking for example, and
+                it would return a list of all the current Classes and Student is taking.
+            </p>
+            <br>
+            <h2>
+                Final Thoughts
+            </h2>
+            <br>
+            <p>
+                Overall, I enjoyed this project as I learned a lot about databases and linking them directly with a user interface, especially after learning
+                so much about databases themselves and their design or tools such as normalization.
+            </p>
+            <br>
+            <p>
+                I also learned how to create a user interface with Python as I had normally done it with Java using Swing, so it was a nice change to learn a
+                new way of designing user interfaces.
+            </p>
         </section>
         <script src="scroll.js"></script>
     </body>
