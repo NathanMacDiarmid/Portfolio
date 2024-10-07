@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Nathan MacDiarmid</title>
+        <link rel="icon" type="image/x-icon" href="/Photos/namd_blue.png">
+        <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/b7deda2336.js" crossorigin="anonymous"></script>
+        <a href="home.html"></a>
+    </head>
+    <body>
+        <section class="home-header">
+            <div class="navbar">
+                <h2>
+                    <div>
+                        <button class="hamburger">
+                            <div class="bar"></div>
+                        </button>
+                        <a href="https://github.com/NathanMacDiarmid" target="_blank" rel="noopener noreferrer"><img class="link" src="/Photos/github logo.png" alt="GitHub" width="26" height="26"></a>
+                        <a href="https://www.linkedin.com/in/nathanmacdiarmid/" target="_blank" rel="noopener noreferrer"><img class="link" src="/Photos/linkedin logo.png" alt="LinkedIn" width="26" height="26"></a>
+                    </div>
+                    <a href="contact.html" class="underline">Contact</a>
+                    <a href="about.html" class="underline">About</a>
+                    <a href="projects.html" class="underline">Projects</a>
+                    <a href="home.html" class="underline">Home</a>
+                    <a href="home.html" class="logo"><img src="/Photos/namd_blue.png" alt="Logo" width="100" height="100"></a>
+                </h2>
+            </div>
+            <div class="mobile-navbar">
+                <h2>
+                    <a href="home.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="https://www.linkedin.com/in/nathanmacdiarmid/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                    <a href="https://github.com/NathanMacDiarmid" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </h2>
+            </div>
+        </section>
+
+        <a href="" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+
+        <section id="project-header">
+            <h2>
+                Product Reviews Web Application
+            </h2>
+            <br>
+            <p>
+                This product reviews web application allows users to browse products, users, their
+                reviews, and allows users to leave a review on specific products. This is complete
+                with web traffic monitoring and visualization using Prometheus and Grafana, and is
+                deployed on a Microsoft Azure cloud instance.
+            </p>
+            <br>
+            <iframe src="/Videos/Spring Monitoring.mp4"></iframe>
+            <ul>
+                <li>Java</li>
+                <li>GitHub</li>
+                <li>SpringBoot</li>
+                <li>Hibernate</li>
+                <li>Azure</li>
+                <li>Prometheus</li>
+                <li>Grafana</li>
+                <li>Docker</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>SOLID Principles</li>
+                <li>Communication</li>
+                <li>Teamwork</li>
+            </ul>
+            <a href="https://github.com/NathanMacDiarmid/ProductReviewsWebApp" target="_blank" rel="noopener noreferrer">
+                <button type="button" class="src-code-button">
+                    View Source Code
+                </button>
+            </a>
+        </section>
+
+        <hr class="left-line">
+        <hr class="right-line">
+
+        <section class="project-info">
+            <h2>
+                Project Goal
+            </h2>
+            <br>
+            <p>
+                The Product Reviews Web App project was proposed to my team and I as part of my course work towards my
+                Software Engineering degree at Carleton University. The goal of this project was to learn how to develop a basic
+                RESTful web application from start to finish. This included setting up a GitHub repository with security features
+                for multiple collaborators, development of multiple RESTful API endpoints, deploying the web application to the cloud,
+                and a CI/CD pipeline that runs our tests and automatically deploys our updated code to our cloud instance on Azure.
+            </p>
+            <br>
+            <h2>
+                Project Breakdown
+            </h2>
+            <br>
+            <p>
+                The project was broken down into four file types:
+            </p>
+            <br>
+            <ul>
+                <li>Business logic</li>
+                <li>DevOps files</li>
+                <li>Monitoring files</li>
+                <li>RESTful endpoints</li>
+            </ul>
+            <br>
+            <p>
+                The business logic was split up into three main files, a Client, a Product, and a Review.
+                Each of these served as a different entity by having the Client be a user who can log in and
+                create an account, containing username, list of reviews, and number of followers; the Product being
+                individual products containing names, descriptions, and an average rating; and the Review being the
+                intertwine between the Client and the Product by allowing Clients to add a Review to a Product containing
+                the rating and the comment on the Product.
+            </p>
+            <br>
+            <p>
+                The DevOps file is contained in the master_productreviewswebapp.yml file and includes the CI/CD pipeline,
+                running our automated testing suite, as well as our automatic deployment script that deploys our web app to
+                Microsoft Azure.
+            </p>
+            <br>
+            <p>
+                The monitoring files are the .yml files located under the monitoring folder. These .yml files allow us to
+                track user visits, usage, and other useful insights using Prometheus and then visualize them using Grafana.
+            </p>
+            <br>
+            <p>
+                The RESTful endpoints are how we communicated between the Client, Product, and Review entities. This also
+                allowed us to create and delete cookie values to store users that are logged in which in turn allowed us to
+                calculate the Jaccard Distance between the logged in user and other users in the database.
+            </p>
+            <br>
+            <h2>
+                Thought Process & Design
+            </h2>
+            <br>
+            <p>
+                This project was given to my team and I during our final year of my Software Engineering degree. We were
+                tasked with creating a Software as a Service (SaaS) project based on one of the following seven ideas:
+            </p>
+            <br>
+            <ul>
+                <li>Perk manager</li>
+                <li>Trustworthy product reviews</li>
+                <li>Amazin online bookstore</li>
+                <li>Mini-Shopify</li>
+                <li>Mini-SurveyMonkey</li>
+                <li>Graduate Admissions Management System</li>
+                <li>4th Year Project Management System</li>
+            </ul>
+            <br>
+            <p>
+                We were also tasked with choosing a subtopic that was group specific, with options such as HTMX, using Spring with MongoDB,
+                and much more! After a group discussion, we all agreed to go with the product reviews idea with a subtopic of using Prometheus
+                and Grafana to monitor and analyze our SaaS application's statistics and insights.
+            </p>
+            <br>
+            <p>
+                Each of the seven ideas had a paragraph attached to it which explained the general idea as well as functional and non-functional
+                requirements which we need to identify. This is how we were able to form our separate Client, Product, and Review entities. From
+                this paragraph, we also identified the ability to follow and unfollow users, the degree of separation between users, as well as the
+                Jaccard Distance between users.
+            </p>
+            <br>
+            <p>
+                We were then tasked to take these functional and non-functional requirements and concretely display them as Issues on the GitHub
+                repository that our projects codebase is stored. This allowed us to accurately track what needed to be done, who needed to do it,
+                and organize all the work into three sprints for each milestone using Agile methodology.
+            </p>
+            <br>
+            <p>
+                The first step we took was to initialize a SpringBoot project which gave us access to the creation of RESTful API's, Hibernate Object
+                Relational Mapping (ORM) and instance database, and Java bean creation. Once this was done, we began creating various RESTful API's that
+                we could call in various places in our application as well as outside of our application through requests on Postman for example.
+            </p>
+            <br>
+            <p>
+                Next, we set up Hibernate as a per-instance database, meaning that it will only store information in the database while the current tab
+                of a browser is open. Once the browser tab closes, the database is wiped and deleted to free up storage. Because of this, we needed to
+                populate the application at run time. We did this by injecting Java beans into the database via the ORM and our RESTful API's. Although
+                we could have integrated another database such as MongoDB where the data remained permanently, the goal of this project was to simply
+                familiarize ourselves with creating a SaaS application from scratch and we needed to ensure we covered all our other functional and non-functional
+                requirements.
+            </p>
+            <br>
+            <p>
+                Lastly, in terms of overall project structure, we set up a CI/CD pipeline using a .yml file, GitHub actions, and terminal commands. This allowed
+                us to build our project within GitHub itself based on our pom.xml file and then automatically run our tests against this temporarily created application
+                environment. We then set permissions on the repository to run this file any time a pull request was open to merge into the master branch. If the tests were
+                successful, you were allowed to merge, otherwise, you needed to fix your code before merging. Additionally, this CI/CD pipeline would run another .yml file
+                through GitHub actions that would automatically deploy any changes merged into the master branch to our Azure instance, making it available for anyone immediately
+                after merging.
+            </p>
+            <br>
+            <p>
+                Once the overall structure of the project was completed, we began adding our other requirements such as integrating Prometheus and Grafana as well as the degrees
+                of separation and the Jaccard distance between users. Additionally, throughout the course of the project, we continually polished up areas of the application such
+                as general stylings or performance improvements.
+            </p>
+            <br>
+            <p>
+                To integrate Prometheus and Grafana, we needed to install and integrate their docker images to our application. We used documentation found online to do this and
+                successfully deployed the monitoring and visualization tools to our application. Unfortunately, we were unable to deploy it to our Azure instance as the student
+                instance we were using had some limitations that prevented us from doing so.
+            </p>
+            <br>
+            <p>
+                Lastly, we implemented two algorithms that allowed users to see other users based on who they follow as well as how similar they are to those users. We displayed
+                new unfollowed users to the current user using a degree of separation algorithm which basically calculates the how far two users are from one another. For example,
+                if I follow Evan, and Evan follows George, but I don't follow George the degree of separation between me and George would be 1 and the degree of separation between
+                Evan and I would be 0. With that being said, we would return a list of the first five users with the lowest degree of separation as suggestions for the current user
+                to follow, removing any with a degree of separation of 0, seeing as they already follow that user.
+            </p>
+            <br>
+            <p>
+                The second algorithm was the Jaccard distance algorithm. The Jaccard distance is an algorithm that we used to display each users' similarity score to one another.
+                For example, if Evan and I both reviewed the same product on our application and only that product, we would have a Jaccard distance or similarity score of 1 or 100%,
+                saying that we are exactly alike. If Evan and I both review different products, but neither of us have a product where we both reviewed, we would have a Jaccard distance
+                or similarity score of 0(%). If we both had a varying degree of reviews with some common products and some not, we would have a Jaccard distance or similarity score of
+                roughly 0.5 or 50%. Based on these examples, when a user would find new users to potentially follow, you could check the Jaccard distance of that user to you to determine
+                how similar they are to you, in our case, based on product reviews. This algorithm in our context was used specifically for determining similarities between users and
+                product reviews, however, it can be applied in various circumstances where you need to calculate how similar one thing is to another.
+            </p>
+            <br>
+            <h2>
+                Final Thoughts
+            </h2>
+            <br>
+            <p>
+                Overall, this project was a cool eye opener for me as it taught me how most enterprise level web applications work as a whole. Although most enterprise level web
+                applications are much larger than this and contain many more features, security protocols, and properly configured databases, it certainly taught me a lot about the
+                overall structure and inner workings of these applications. Additionally, it also taught me how to develop, test, and use API's internally and externally from within
+                an application in Java to which I was able to translate to React in my free time. I thoroughly enjoyed working on this project especially with the strong and talented
+                team that assisted me as none of use knew that these types of applications existed nor how they worked, and with each others support we gave each other that understanding.
+            </p>
+        </section>
+        <script src="scroll.js"></script>
+    </body>
+    <footer>
+        <div class="footer">
+            <h3>Links</h3>
+            <br>
+            <a href="mailto:nathanmacdiarmid@gmail.com" target="_blank" rel="noopener noreferrer"><img src="/Photos/email logo.png" alt="GitHub" width="26" height="26" style="border-radius: 2%;"></a>
+            <a href="https://github.com/NathanMacDiarmid" target="_blank" rel="noopener noreferrer"><img src="/Photos/github logo.png" alt="GitHub" width="26" height="26" style="border-radius: 2%;"></a>
+            <a href="https://www.linkedin.com/in/nathanmacdiarmid/" target="_blank" rel="noopener noreferrer"><img src="/Photos/linkedin logo.png" alt="LinkedIn" width="26" height="26" style="border-radius: 2%;"></a>
+        </div>
+        <div class="footer">
+            <h3>Pages</h3>
+            <br>
+            <a href="home.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer">
+            <p>&copy; Copyright 2023 Nathan MacDiarmid</p>
+        </div>
+    </footer>
+</html>
