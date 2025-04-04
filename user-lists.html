@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Lists | BitSleep</title>
+  <link rel="stylesheet" href="user-lists-css.css">
+</head>
+<body>
+  <div class="container">
+    <h1>User Management</h1>
+
+    <!-- Bronze User Section -->
+    <div class="user-section bronze">
+      <h2>Bronze User</h2>
+      <form class="user-form" id="bronze-form">
+        <label for="bronze-username">Username</label>
+        <input type="text" id="bronze-username" placeholder="Enter Bronze username" required />
+        
+        <label for="bronze-value">Value</label>
+        <input type="text" id="bronze-value" placeholder="Enter value" required />
+        
+        <button type="submit">Add Bronze User</button>
+      </form>
+      <ul id="bronze-list" class="user-list">
+        <!-- Dynamic list for Bronze User -->
+      </ul>
+    </div>
+
+    <!-- Platinum User Section -->
+    <div class="user-section platinum">
+      <h2>Platinum User</h2>
+      <form class="user-form" id="platinum-form">
+        <label for="platinum-username">Username</label>
+        <input type="text" id="platinum-username" placeholder="Enter Platinum username" required />
+        
+        <label for="platinum-value">Value</label>
+        <input type="text" id="platinum-value" placeholder="Enter value" required />
+        
+        <button type="submit">Add Platinum User</button>
+      </form>
+      <ul id="platinum-list" class="user-list">
+        <!-- Dynamic list for Platinum User -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Handle adding Bronze users
+    document.getElementById('bronze-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('bronze-username').value;
+      const value = document.getElementById('bronze-value').value;
+
+      if (username && value) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${username}: ${value}`;
+        
+        // Add Remove button
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remove';
+        removeBtn.classList.add('remove-btn');
+        removeBtn.onclick = function() {
+          listItem.remove();
+        };
+
+        listItem.appendChild(removeBtn);
+        document.getElementById('bronze-list').appendChild(listItem);
+
+        // Clear input fields
+        document.getElementById('bronze-username').value = '';
+        document.getElementById('bronze-value').value = '';
+      }
+    });
+
+    // Handle adding Platinum users
+    document.getElementById('platinum-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('platinum-username').value;
+      const value = document.getElementById('platinum-value').value;
+
+      if (username && value) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${username}: ${value}`;
+        
+        // Add Remove button
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remove';
+        removeBtn.classList.add('remove-btn');
+        removeBtn.onclick = function() {
+          listItem.remove();
+        };
+
+        listItem.appendChild(removeBtn);
+        document.getElementById('platinum-list').appendChild(listItem);
+
+        // Clear input fields
+        document.getElementById('platinum-username').value = '';
+        document.getElementById('platinum-value').value = '';
+      }
+    });
+  </script>
+</body>
+</html>
