@@ -1,5 +1,6 @@
 [[redirects]]
-  from = "/bitsleeplogin"
+  from = "/"
   to = "/bitsleep-login.html"
   status = 200
   force = true
+  conditions = {Host = "bitsleeplogin.nathanmacdiarmid.com"}
